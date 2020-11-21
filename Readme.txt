@@ -1,11 +1,15 @@
 Creacion App-Web de notas con MERN-stack.
 
 [ ]--Creaciond del backend.
-    [ ]--instalacion de modulos/dependencias.
-    [ ]--creacion del servidor.
-    [ ]--creacion del puerto.
-    [ ]--conexion a la base de datos.
-    [ ]--creacion de las rutas.
+    [X]--instalacion de modulos/dependencias.
+    [X]--creacion del servidor.
+        [ ]--funciones del servidor/controladores
+        [ ]--modelacion de datos/models
+        [ ]--creacion de las rutas.
+    [X]--creacion del puerto.
+    [X]--creacion de la base de datos.
+    [X]--conexion a la base de datos.
+    
 
 [ ]--Creacion del frontend.
     [ ]--crear archivo react.
@@ -22,5 +26,7 @@ Creacion App-Web de notas con MERN-stack.
 cors: modulo que permite la conexion 
 entre servidores del la web y el del database
 
-dotenv: nos permite manipular variable de entorno
+dotenv: nos permite manipular variable de entorno.
+--con su modulo config va a ejecutar todas las 
+variables de entorno creadas.
 
