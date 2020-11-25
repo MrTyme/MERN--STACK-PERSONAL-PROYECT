@@ -12,10 +12,14 @@ Creacion App-Web de notas con MERN-stack.
     
 
 [ ]--Creacion del frontend.
-    [ ]--crear archivo react.
-    [ ]--creacion de las vistas.
-    [ ]--creacion de opciones.
-    [ ]--creacion de usuarios .
+    [X]--crear archivo react.
+    [ ]--Creacion de componentes.
+        [ ]--creacion de las vistas.
+            [X]--navegacion de vistas.
+            []--creacion de notas.
+            []--lista de notas.
+            []--creacion de usuarios.
+    [ ]--completacion del app.js
 
 
 
@@ -40,6 +44,19 @@ en la base de datos.
 rutas:
 --direccion en la que se desplazan los datos
 dentro de la base de datos
+
+//////////////////////////////////////
+
+--Atributos de react:
+
+path: se encarga de llamar a una direccion 
+de la url 
+
+exact: hace que la ruta coincida con la ruta que se
+envia por navegador.
+
+
+
 
 //////////////////////////////////////
 
