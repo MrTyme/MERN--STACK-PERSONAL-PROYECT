@@ -16,9 +16,9 @@ Creacion App-Web de notas con MERN-stack.
     [ ]--Creacion de componentes.
         [ ]--creacion de las vistas.
             [X]--navegacion de vistas.
+            []--creacion de usuarios.
             []--creacion de notas.
             []--lista de notas.
-            []--creacion de usuarios.
     [ ]--completacion del app.js
 
 
