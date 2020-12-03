@@ -17,50 +17,7 @@ Creacion App-Web de notas con MERN-stack.
         [ ]--creacion de las vistas.
             [X]--navegacion de vistas.
             [X]--creacion de usuarios.
-            []--creacion de notas.
+            [X]--creacion de notas.
+                []--edicion de notas.
             []--lista de notas.
     [ ]--completacion del app.js
-
-
-
-//////////////////////////////////////
-
-**modulos a usar:
-
-cors: modulo que permite la conexion 
-entre servidores del la web y el del database
-
-dotenv: nos permite manipular variable de entorno.
---con su modulo config va a ejecutar todas las 
-variables de entorno creadas.
-
-//////////////////////////////////////
-
-controladores:
---permiten manipular de forma mas optima
-con archivos por separado los datos creados
-en la base de datos.
-
-rutas:
---direccion en la que se desplazan los datos
-dentro de la base de datos
-
-//////////////////////////////////////
-
---Atributos de react:
-
-path: se encarga de llamar a una direccion 
-de la url 
-
-exact: hace que la ruta coincida con la ruta que se
-envia por navegador.
-
-
-
-
-//////////////////////////////////////
-
-NOTA>> recuerda cuando vayas a crear
-una aplicacion completa tu solo
-debes crear dos carpetas fuente, 
-una para el backend y otra para el frontend.
