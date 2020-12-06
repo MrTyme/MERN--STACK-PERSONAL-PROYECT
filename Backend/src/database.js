@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //creacion de la direccion de mongodb
 const URI = process.env.MONGODB_URI 
 ? process.env.MONGODB_URI 
-: 'mongodb://localhost/databasetest' ;
+: 'mongodb://localhost/databasePrueba' ;
 //con process accedemos al sistema operativo
 //buscamos la opcion de variable de entorno
 //y escogemos la varibale de entorno creada

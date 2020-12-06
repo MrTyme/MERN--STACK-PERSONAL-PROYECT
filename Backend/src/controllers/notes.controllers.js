@@ -45,14 +45,15 @@ notesCtrl.getNote = async (req,res) => {
 
 notesCtrl.updateNotes = async (req,res) => {
     //pase de datos
-    const {title, content, author} = req.body
+    const {title, content, author, date} = req.body
 
     //actualizacion de los datos
     await Note.findOneAndUpdate({_id: req.params.id}, {
         //tipo de dato a actualizar
         title,
         author,
-        content
+        content,
+        date
     })
     res.json({ massage: 'Note Upload'});
 }

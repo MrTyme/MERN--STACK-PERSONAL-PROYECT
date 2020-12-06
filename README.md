@@ -1,3 +1,8 @@
+
+
+
+##
+
 Creacion App-Web de notas con MERN-stack.
 
 [X]--Creaciond del backend.
@@ -11,13 +16,13 @@ Creacion App-Web de notas con MERN-stack.
         [X]--modelacion de datos/models
     
 
-[ ]--Creacion del frontend.
+[X]--Creacion del frontend.
     [X]--crear archivo react.
-    [ ]--Creacion de componentes.
-        [ ]--creacion de las vistas.
+    [X]--Creacion de componentes.
+        [X]--creacion de las vistas.
             [X]--navegacion de vistas.
             [X]--creacion de usuarios.
             [X]--creacion de notas.
-                []--edicion de notas.
-            []--lista de notas.
-    [ ]--completacion del app.js
+                [X]--edicion de notas.
+            [X]--lista de notas.
+    [X]--culminacion del app.js

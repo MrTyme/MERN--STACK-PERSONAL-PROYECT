@@ -10,22 +10,43 @@ export default class CreateNote extends Component {
     state = {
         users: [],
         userSelected: '',
+        //propiedad para almacenar los estados
         title:'',
         content:'',
-        //propiedad para almacenar los estados
         date: new Date(),
+        editing: false,
+        //id del objeto a alterar
+        _id: '',
     }
 
     //llamado de los usuarios y enlistamiento de la nota
     async componentDidMount(){
         const res = await axios.get('http://localhost:4000/api/users');
+        //confirmacion del usuario eh invocacion de la funcion por usuario
         this.setState({
             users: res.data.map(user => user.username),
             userSelected: res.data[0].username
         });
+
+
+        //actualizacion de la nota
+        if (this.props.match.params.id) {
+            //peticion get de una nota especifica
+            const res = await axios.get('http://localhost:4000/api/notes/' + this.props.match.params.id);
+            console.log(res.data);
+            //propiedad que nos permitira alterar el formulario creado
+            this.setState({
+                title: res.data.title,
+                content: res.data.content,
+                data:new Date(res.data.date),
+                userSelected: res.data.author,
+                editing: true,
+                _id: this.props.match.params.id
+            });
+        }
     }
 
-    //creacion de la nota
+    //creacion de la nota y actualizacion
     onSubmit = async (e) => {
         e.preventDefault();
         //esta constante va a enviar la nota al backend
@@ -35,8 +56,17 @@ export default class CreateNote extends Component {
             date: this.state.date,
             author: this.state.userSelected
         };
-        await axios.post('http://localhost:4000/api/notes', newNote);
-    
+        
+        
+        //validacion para actualizar la actualizacion
+        if (this.state.editing) {
+            //si se valida con put se agrega lo alterado
+            //pero se debe recibir el id del objeto a manipular
+            await axios.put('http://localhost:4000/api/notes/'+ this.state._id, newNote);
+        }else{
+            //caso contrario se conserva
+            await axios.post('http://localhost:4000/api/notes', newNote);
+        }
         
         //redirecion a la vista de notas:
         window.location.href = '/';
@@ -66,9 +96,10 @@ export default class CreateNote extends Component {
                     <div className="from-group">
                         <select
                             className="form-control"
-                            name="UserSelected"
+                            name="userSelected"
                             onChange = {this.onInputChange}
-                            >
+                            value = {this.state.userSelected}
+                        >
                             {
                                 //recorrido de los usuarios
                                 this.state.users.map(user => 
@@ -88,6 +119,7 @@ export default class CreateNote extends Component {
                         placeholder="Title" 
                         name = "title"
                         onChange = {this.onInputChange}
+                        value = {this.state.title}
                         required
                         />
                     </div>
@@ -97,9 +129,10 @@ export default class CreateNote extends Component {
                     <div className="form-group">
                             <textarea
                             name="content"
-                            className="form-control"
-                            placeholder="content"
+                            className= "form-control"
+                            placeholder="Content"
                             onChange = {this.onInputChange}
+                            value = {this.state.content}
                             required
                             >
 
@@ -117,7 +150,8 @@ export default class CreateNote extends Component {
 
 
                     <form onSubmit = {this.onSubmit}>
-                        <button type ="submit " className = "btn btn-primary">
+                        <button type ="submit" 
+                        className = "btn btn-primary">
                             SAVE
                         </button>
                     </form>

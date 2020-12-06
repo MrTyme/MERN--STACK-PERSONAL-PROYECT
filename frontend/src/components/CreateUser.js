@@ -14,7 +14,7 @@ export default class CreateUser extends Component {
 
 
     //llamada a la direccion de la base de datos
-    async componentDidMount(){
+    componentDidMount(){
         //llamada al metodo que se crea los usuarios
         this.getUsers();
     }
@@ -100,15 +100,15 @@ export default class CreateUser extends Component {
                     <ul className="list-group">
                         {//enlistamiento de datos por consola
                             this.state.users.map(user => 
-                            <li 
+                            (<li 
                                 className="list-group-item list-group-item-action" 
                                 key={user._id}
                                 onDoubleClick = {() => {
                                     this.deleteUser(user._id);
                                 }}
-                                >
+                            >
                                     {user.username}
-                            </li>)
+                            </li>))
                         }
                     </ul>
                 </div>
