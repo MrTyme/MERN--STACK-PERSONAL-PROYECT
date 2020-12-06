@@ -7,11 +7,13 @@ MERN -STACK-PERSONAL-PROYECT
 Note list app, with database on mongoDB for create a notes and 
 users.
 
+All proyect was create on MERN-Stack
+
 # ###################################################
 # Deploy
 
 In this moment we dont have deploy link, but on future 
-i wanna use heroku for try make a deployApp
+i wanna use heroku for try make a deployApp.
 
 # ###################################################
 # Dependencies
