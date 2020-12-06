@@ -18,7 +18,7 @@ i wanna use heroku for try make a deployApp.
 # ###################################################
 # Dependencies
 
-The list of dependencies is:
+The list of dependencies for use in local is:
     
     # for backend:
         cors, dotenv, express, moongose.
@@ -30,6 +30,11 @@ The list of dependencies is:
         react, react-datepicker, react-dom, bootstrap, axios,
         timeago.js. 
 
+on backend folder use next comand:
+    npm run dev
+    
+on frontend folder use next comand:
+    npm start
 
 
 # ###################################################
