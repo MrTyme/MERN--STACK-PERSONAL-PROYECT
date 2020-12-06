@@ -1,7 +1,47 @@
+# Title proyect
+
+MERN -STACK-PERSONAL-PROYECT
+# ###################################################
+# Description
+
+Note list app, with database on mongoDB for create a notes and 
+users.
+
+# ###################################################
+# Deploy
+
+In this moment we dont have deploy link, but on future 
+i wanna use heroku for try make a deployApp
+
+# ###################################################
+# Dependencies
+
+The list of dependencies is:
+    
+    # for backend:
+        cors, dotenv, express, moongose.
+        
+        #work-dependence:
+            nodemon
+
+    # for frontend:
+        react, react-datepicker, react-dom, bootstrap, axios,
+        timeago.js. 
 
 
 
-##
+# ###################################################
+# special thanks
+
+--I am very grateful with Fazt developer and him youtube channel:   'https://www.youtube.com/c/FaztCode', where i learn a lot about
+web and movile app programing. 
+
+if you wanna learn more, please go for the link and subscribed
+in him channel. 
+
+
+# ###################################################
+# Develop process
 
 Creacion App-Web de notas con MERN-stack.
 
